@@ -1,26 +1,225 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-cairo: var(--font-cairo), "Cairo", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --teal: #0d736d;
+  --teal-light: #e6f4f2;
+  --dark: #0f1923;
+  --gray-bg: #f9f9fb;
+  --gray-border: #e8eaed;
+  --text-muted: #5f6c7b;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #ffffff;
+  color: #0f1923;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Cairo Font Utility & RTL Global Enforcement */
+.font-cairo,
+[dir="rtl"],
+[dir="rtl"] body {
+  font-family: var(--font-cairo), "Cairo", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+}
+
+/* In RTL, mirror icons and adjust spacings smoothly */
+[dir="rtl"] .rtl-mirror {
+  transform: scaleX(-1);
+}
+
+/* Section badge matching MediClinic exactly */
+.section-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: #f0f7f6;
+  border: 1px solid #d2ece8;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #0d736d;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.badge-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #0d736d;
+}
+
+/* Primary Button: compact padding and 8px max radius */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  background-color: #0f1923;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0d736d;
+  transform: translateY(-1px);
+}
+
+.btn-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  transition: transform 0.25s ease;
+}
+
+.btn-primary:hover .btn-icon {
+  transform: translateX(2px) translateY(-2px);
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+[dir="rtl"] .btn-primary:hover .btn-icon {
+  transform: translateX(-2px) translateY(-2px);
+}
+
+/* Secondary outline button: compact padding and 8px max radius */
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #ffffff;
+  border: 1px solid #e1e4e8;
+  color: #0f1923;
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.btn-outline:hover {
+  border-color: #0d736d;
+  color: #0d736d;
+}
+
+/* Arrow button */
+.arrow-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+.arrow-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.25s ease;
+}
+
+/* Dot badge */
+.dot-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+.dot-badge::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--teal);
+  display: block;
+}
+
+/* Nav link underline */
+.nav-link {
+  position: relative;
+  font-size: 14px;
+  font-weight: 500;
+  color: #0f1923;
+  text-decoration: none;
+  padding-bottom: 2px;
+  transition: color 0.3s;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1.5px;
+  background: var(--teal);
+  transition: width 0.3s;
+}
+[dir="rtl"] .nav-link::after {
+  left: auto;
+  right: 0;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+.nav-link:hover {
+  color: var(--teal);
+}
+
+/* Marquee infinite scroll */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-rtl {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(50%); }
+}
+
+.marquee-container {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+[dir="rtl"] .marquee-container {
+  animation: marquee-rtl 35s linear infinite;
+}
+
+.marquee-container:hover {
+  animation-play-state: paused;
 }
