@@ -17,10 +17,13 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import Link from "next/link";
+import { submitLead, type LeadSubmission } from "@/app/actions";
 
 export default function EventClientPage({ event }: { event: EventItem }) {
   const { isAr } = useI18n();
   const [registered, setRegistered] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
   const [formData, setFormData] = useState({
     name: "",
@@ -30,8 +33,21 @@ export default function EventClientPage({ event }: { event: EventItem }) {
     specialty: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitting(true);
+    setSubmitError("");
+    const result = await submitLead({
+      source: `Event registration: ${event.title.en}`,
+      ...formData,
+    } satisfies LeadSubmission);
+    setSubmitting(false);
+
+    if (result.error) {
+      setSubmitError(result.error);
+      return;
+    }
+
     setRegistered(true);
   };
 
@@ -518,11 +534,14 @@ export default function EventClientPage({ event }: { event: EventItem }) {
                       </div>
                     </div>
 
+                    {submitError && <p role="alert" className="text-xs text-red-300">{submitError}</p>}
+
                     <button
                       type="submit"
+                      disabled={submitting}
                       className="w-full bg-[#0d736d] hover:bg-[#0a5c57] text-white font-semibold py-3 px-4 rounded-lg text-xs transition-all duration-200 shadow-sm cursor-pointer flex items-center justify-center gap-2 mt-4"
                     >
-                      <span>{isAr ? "تأكيد طلب حجز المقعد" : "Confirm Seat Reservation"}</span>
+                      <span>{submitting ? (isAr ? "جارٍ الإرسال..." : "Sending...") : (isAr ? "تأكيد طلب حجز المقعد" : "Confirm Seat Reservation")}</span>
                       <ArrowUpRight className={`w-3.5 h-3.5 ${isAr ? "rtl-mirror" : ""}`} />
                     </button>
                   </form>
