@@ -31,6 +31,7 @@ export default function EventClientPage({ event }: { event: EventItem }) {
     phone: "",
     hospital: "",
     specialty: "",
+    website: "",
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -461,6 +462,17 @@ export default function EventClientPage({ event }: { event: EventItem }) {
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-3.5">
+                    <div className="absolute -left-[9999px]" aria-hidden="true">
+                      <label htmlFor="event-website">Website</label>
+                      <input
+                        id="event-website"
+                        type="text"
+                        tabIndex={-1}
+                        autoComplete="off"
+                        value={formData.website}
+                        onChange={(e) => setFormData({ ...formData, website: e.target.value })}
+                      />
+                    </div>
                     <div>
                       <label className="block text-xs font-semibold text-neutral-300 uppercase tracking-wider mb-1">
                         {isAr ? "الاسم الكامل *" : "Full Name *"}

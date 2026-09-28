@@ -15,6 +15,7 @@ export default function Contact() {
     phone: "",
     line: "",
     notes: "",
+    website: "",
   });
   const { t, isAr } = useI18n();
 
@@ -130,6 +131,9 @@ export default function Contact() {
                       {t.contact.basedLabel}
                     </span>
                     <span className="text-sm sm:text-base font-bold text-white group-hover:text-[#0d736d] transition-colors block">
+                      {t.contact.location}
+                    </span>
+                    <span className="text-[11px] text-neutral-400 mt-0.5 block">
                       79H2+JR3 Abu Saif Business Centre, Main Entrance B - Hor Al Anz East - Deira - Dubai
                     </span>
                     <span className="text-[11px] text-neutral-400 mt-0.5 block">
@@ -161,6 +165,17 @@ export default function Contact() {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-3">
+                  <div className="absolute -left-[9999px]" aria-hidden="true">
+                    <label htmlFor="contact-website">Website</label>
+                    <input
+                      id="contact-website"
+                      type="text"
+                      tabIndex={-1}
+                      autoComplete="off"
+                      value={formData.website}
+                      onChange={(event) => setFormData({ ...formData, website: event.target.value })}
+                    />
+                  </div>
                   <div>
                     <label className="block text-xs font-semibold text-neutral-700 uppercase tracking-wider mb-1">
                       {t.contact.nameLabel}
