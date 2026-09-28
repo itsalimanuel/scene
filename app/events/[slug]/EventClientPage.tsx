@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { submitLead, type LeadSubmission } from "@/app/actions";
+import PhoneInput from "@/components/ui/PhoneInput";
 
 export default function EventClientPage({ event }: { event: EventItem }) {
   const { isAr } = useI18n();
@@ -534,14 +535,12 @@ export default function EventClientPage({ event }: { event: EventItem }) {
                         <label className="block text-xs font-semibold text-neutral-300 uppercase tracking-wider mb-1">
                           {isAr ? "رقم الهاتف للتواصل *" : "Phone Number *"}
                         </label>
-                        <input
-                          type="tel"
+                        <PhoneInput
                           required
-                          dir="ltr"
                           value={formData.phone}
-                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                          onChange={(phone) => setFormData({ ...formData, phone })}
                           placeholder="+971 50 000 0000"
-                          className="w-full px-3.5 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white text-xs focus:outline-none focus:border-[#0d736d] placeholder:text-neutral-400"
+                          dark
                         />
                       </div>
                     </div>

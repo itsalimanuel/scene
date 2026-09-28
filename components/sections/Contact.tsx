@@ -4,6 +4,7 @@ import { ArrowUpRight, Phone, MapPin, Check } from "lucide-react";
 import { useI18n } from "@/lib/i18n/context";
 import { submitLead, type LeadSubmission } from "@/app/actions";
 import Select from "@/components/ui/Select";
+import PhoneInput from "@/components/ui/PhoneInput";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -117,16 +118,16 @@ export default function Contact() {
                   </div>
                 </a>
 
-                <a
-                  href="https://www.google.com/maps/search/?api=1&query=79H2%2BJR3%20Abu%20Saif%20Business%20Centre%2C%20Main%20Entrance%20B%2C%20Hor%20Al%20Anz%20East%2C%20Deira%2C%20Dubai"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-4 bg-white/[0.03] hover:bg-white/[0.1] border border-white/10 rounded-xl flex items-center gap-3.5 transition-all duration-300 group"
-                >
+                <div className="p-4 bg-white/[0.03] border border-white/10 rounded-xl flex items-center gap-3.5">
                   <div className="w-9 h-9 rounded-lg bg-white/10 text-[#0d736d] flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-4 h-4" />
                   </div>
-                  <div>
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=79H2%2BJR3%20Abu%20Saif%20Business%20Centre%2C%20Main%20Entrance%20B%2C%20Hor%20Al%20Anz%20East%2C%20Deira%2C%20Dubai"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block min-w-0 group"
+                  >
                     <span className="text-[10px] font-semibold text-neutral-400 uppercase tracking-widest block mb-0.5">
                       {t.contact.basedLabel}
                     </span>
@@ -139,8 +140,8 @@ export default function Contact() {
                     <span className="text-[11px] text-neutral-400 mt-0.5 block">
                       {t.contact.companyName}
                     </span>
-                  </div>
-                </a>
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -208,14 +209,11 @@ export default function Contact() {
                       <label className="block text-xs font-semibold text-neutral-700 uppercase tracking-wider mb-1">
                         {t.contact.phoneLabel}
                       </label>
-                      <input
-                        type="tel"
+                      <PhoneInput
                         required
-                        dir="ltr"
                         value={formData.phone}
-                        onChange={(event) => setFormData({ ...formData, phone: event.target.value })}
+                        onChange={(phone) => setFormData({ ...formData, phone })}
                         placeholder={t.contact.phonePlaceholder}
-                        className="w-full px-3.5 py-2.5 rounded-lg border border-[#e8eaed] text-xs focus:outline-none focus:border-[#0d736d]"
                       />
                     </div>
                   </div>
