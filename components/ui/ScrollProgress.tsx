@@ -24,7 +24,7 @@ export default function ScrollProgress() {
     <div className="fixed top-0 left-0 right-0 z-[100] h-[3px] bg-transparent">
       <div
         ref={barRef}
-        className="h-full bg-[#0d736d] transition-none"
+        className="h-full bg-[#003C72] transition-none"
         style={{ width: "0%" }}
       />
     </div>

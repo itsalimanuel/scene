@@ -1,12 +1,13 @@
 "use client";
 import { useState, useEffect } from "react";
-import { ArrowUpRight, Globe } from "lucide-react";
+import { ArrowUpRight, Globe, Phone } from "lucide-react";
 import { useI18n } from "@/lib/i18n/context";
+import Link from "next/link";
 
 export default function Navbar() {
   const [solid, setSolid] = useState(false);
   const [open, setOpen] = useState(false);
-  const { t, locale, toggleLocale, isAr } = useI18n();
+  const { t, toggleLocale, isAr } = useI18n();
 
   useEffect(() => {
     const onScroll = () => setSolid(window.scrollY > 60);
@@ -29,16 +30,38 @@ export default function Navbar() {
           : "bg-white/80 md:bg-transparent border-b border-transparent"
       }`}
     >
+      <div className="border-b border-white/20 bg-[#003C72]">
+        <div className="mx-auto flex h-9 max-w-7xl items-center justify-between px-6 lg:px-12">
+          <a
+            href="tel:+97142548020"
+            className="flex items-center gap-2 text-[11px] font-medium text-white/85 transition-colors hover:text-white"
+            dir="ltr"
+          >
+            <Phone className="h-3.5 w-3.5 text-white" />
+            <span>+971 4 254 8020</span>
+          </a>
+          <a
+            href="https://www.linkedin.com/company/scene-medical-supplies/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={isAr ? "سين ميديكال على لينكدإن" : "Scene Medical on LinkedIn"}
+            title="LinkedIn"
+            className="flex h-7 w-7 items-center justify-center text-white/85 transition-colors hover:text-white"
+          >
+            <span aria-hidden="true" className="text-[13px] font-extrabold leading-none">in</span>
+          </a>
+        </div>
+      </div>
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
 
-          <a href="/#home" className="flex items-center no-underline group py-2">
+          <Link href="/#home" className="flex items-center no-underline group py-2">
             <img
               src="/images/logo.png"
               alt="Scene Medical Supplies"
               className="h-8 sm:h-9 md:h-10 w-auto object-contain transition-opacity duration-300 group-hover:opacity-85"
             />
-          </a>
+          </Link>
 
 
           <nav className="hidden lg:flex items-center gap-8">
@@ -56,16 +79,16 @@ export default function Navbar() {
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-neutral-200 hover:border-[#0d736d] text-xs font-semibold text-[#0f1923] hover:text-[#0d736d] transition-colors cursor-pointer"
               title={isAr ? "Switch to English" : "التبديل إلى العربية"}
             >
-              <Globe className="w-3.5 h-3.5 text-[#0d736d]" />
+              <Globe className="w-3.5 h-3.5 text-[#003C72]" />
               <span>{isAr ? "English" : "العربية"}</span>
             </button>
 
-            <a href="/#contact" className="btn-primary text-xs group">
+            <Link href="/#contact" className="btn-primary text-xs group">
               <span>{t.nav.connectBtn}</span>
               <span className="btn-icon">
                 <ArrowUpRight className={`w-3.5 h-3.5 transition-transform duration-300 ${isAr ? "rtl-mirror" : "group-hover:translate-x-0.5 group-hover:-translate-y-0.5"}`} />
               </span>
-            </a>
+            </Link>
           </div>
 
           {/* Hamburger + Mobile Lang Toggle */}

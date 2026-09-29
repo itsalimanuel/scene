@@ -23,7 +23,7 @@ export default function EventsPage() {
     <div className="min-h-screen bg-white flex flex-col">
       <Navbar />
 
-      <main className="flex-1 pt-24 pb-20">
+      <main className="flex-1 pt-32 pb-20">
         {/* Top Header */}
         <section className="py-12 lg:py-16 bg-[#f9f9fb] border-b border-[#e8eaed]">
           <div className="max-w-7xl mx-auto px-6 lg:px-12">

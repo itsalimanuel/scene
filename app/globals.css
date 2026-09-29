@@ -6,9 +6,9 @@
 }
 
 :root {
-  --teal: #0d736d;
+  --teal: #003C72;
   --teal-light: #e6f4f2;
-  --dark: #0f1923;
+  --dark: #003C72;
   --gray-bg: #f9f9fb;
   --gray-border: #e8eaed;
   --text-muted: #5f6c7b;
@@ -25,7 +25,7 @@ html {
 body {
   font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   background-color: #ffffff;
-  color: #0f1923;
+  color: #003C72;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
@@ -48,12 +48,12 @@ body {
   align-items: center;
   gap: 7px;
   background: #f0f7f6;
-  border: 1px solid #d2ece8;
+  border: 1px solid #003d7225;
   padding: 5px 12px;
   border-radius: 8px;
   font-size: 11px;
   font-weight: 600;
-  color: #0d736d;
+  color: #003C72;
   text-transform: uppercase;
   letter-spacing: 0.08em;
 }
@@ -62,7 +62,7 @@ body {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background-color: #0d736d;
+  background-color: #003C72;
 }
 
 /* Primary Button: compact padding and 8px max radius */
@@ -70,7 +70,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  background-color: #0f1923;
+  background-color: #003C72;
   color: #ffffff;
   padding: 8px 16px;
   border-radius: 8px;
@@ -81,7 +81,7 @@ body {
 }
 
 .btn-primary:hover {
-  background-color: #0d736d;
+  background-color: #003d72df;
   transform: translateY(-1px);
 }
 
@@ -222,4 +222,45 @@ body {
 
 .marquee-container:hover {
   animation-play-state: paused;
+}
+
+.hero-shader {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 15;
+  pointer-events: none;
+  opacity: 1;
+  background-image: linear-gradient(rgba(0, 60, 114, 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 60, 114, 0.09) 1px, transparent 1px);
+  background-size: 32px 32px;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 68%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 68%, transparent 100%);
+}
+
+.hero-shader canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.preloader-progress {
+  animation: preloader-sweep 1s cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+
+@keyframes preloader-sweep {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@media (max-width: 767px) {
+  .hero-shader {
+    opacity: 1;
+    background-size: 32px 32px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .preloader-progress {
+    animation-duration: 0.25s;
+  }
 }

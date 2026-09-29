@@ -57,7 +57,7 @@ export default function EventClientPage({ event }: { event: EventItem }) {
     <div className="min-h-screen bg-white flex flex-col">
       <Navbar />
 
-      <main className="flex-1 pt-24 pb-20">
+      <main className="flex-1 pt-32 pb-20">
         {/* Top Breadcrumb & Back Bar */}
         <div className="bg-[#f9f9fb] border-b border-[#e8eaed] py-4">
           <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between">

@@ -25,7 +25,7 @@ export default function Button({
 
   const variants = {
     primary:
-      "bg-[#0d736d] text-white px-4 py-2 rounded-lg hover:bg-[#0a5c57] hover:shadow-sm hover:-translate-y-0.5",
+      "bg-[#003C72] text-white px-4 py-2 rounded-lg hover:bg-[#003C72] hover:shadow-sm hover:-translate-y-0.5",
     outline:
       "border border-[#0d736d] text-[#0d736d] px-4 py-2 rounded-lg hover:bg-[#0d736d] hover:text-white hover:-translate-y-0.5",
     light:

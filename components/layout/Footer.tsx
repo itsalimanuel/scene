@@ -26,34 +26,34 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div className="md:col-span-3">
-            <h5 className="text-xs font-semibold uppercase tracking-widest text-[#0d736d] mb-3">
+            <h5 className="text-xs font-semibold uppercase tracking-widest text-[#003C72] mb-3">
               {t.footer.navTitle}
             </h5>
             <ul className="space-y-2 text-xs sm:text-sm text-neutral-300">
               <li>
-                <a href="#home" className="hover:text-[#0d736d] transition-colors">{t.nav.about === "About Us" ? "Home" : "الرئيسية"}</a>
+                <a href="#home" className="hover:text-[#003C72] transition-colors">{t.nav.about === "About Us" ? "Home" : "الرئيسية"}</a>
               </li>
               <li>
-                <a href="#about" className="hover:text-[#0d736d] transition-colors">{t.nav.about}</a>
+                <a href="#about" className="hover:text-[#003C72] transition-colors">{t.nav.about}</a>
               </li>
               <li>
-                <a href="#solutions" className="hover:text-[#0d736d] transition-colors">{t.nav.solutions}</a>
+                <a href="#solutions" className="hover:text-[#003C72] transition-colors">{t.nav.solutions}</a>
               </li>
               <li>
-                <a href="#focus" className="hover:text-[#0d736d] transition-colors">{t.nav.focus}</a>
+                <a href="#focus" className="hover:text-[#003C72] transition-colors">{t.nav.focus}</a>
               </li>
               <li>
-                <a href="#insights" className="hover:text-[#0d736d] transition-colors">{t.nav.events}</a>
+                <a href="#insights" className="hover:text-[#003C72] transition-colors">{t.nav.events}</a>
               </li>
               <li>
-                <a href="#contact" className="hover:text-[#0d736d] transition-colors">{t.nav.contact}</a>
+                <a href="#contact" className="hover:text-[#003C72] transition-colors">{t.nav.contact}</a>
               </li>
             </ul>
           </div>
 
           {/* Clinical Focus */}
           <div className="md:col-span-4">
-            <h5 className="text-xs font-semibold uppercase tracking-widest text-[#0d736d] mb-3">
+            <h5 className="text-xs font-semibold uppercase tracking-widest text-[#003C72] mb-3">
               {t.footer.specializedTitle}
             </h5>
             <ul className="space-y-2 text-xs sm:text-sm text-neutral-400">

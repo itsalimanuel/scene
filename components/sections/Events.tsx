@@ -21,7 +21,7 @@ export default function Events() {
   return (
     <section id="insights" className="py-14 lg:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        {/* Header with Link to /events */}
+
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-10">
           <div>
             <div className="section-badge mb-3">
@@ -39,7 +39,7 @@ export default function Events() {
             </p>
             <Link
               href="/events"
-              className="text-xs font-semibold text-[#0d736d] hover:text-[#0f1923] transition-colors flex items-center gap-1 group"
+              className="text-xs font-semibold text-[#003C72] hover:text-[#003C72] transition-colors flex items-center gap-1 group"
             >
               <span>{isAr ? "استعراض جميع الفعاليات والمؤتمرات" : "Browse All Events & Conferences"}</span>
               <ArrowRight className={`w-3.5 h-3.5 transition-transform duration-200 ${isAr ? "rotate-180 group-hover:-translate-x-1" : "group-hover:translate-x-1"}`} />
@@ -47,9 +47,9 @@ export default function Events() {
           </div>
         </div>
 
-        {/* Gallery Grid */}
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
-          {/* Featured Keynote Card (Links to annual-spine-pain-symposium) */}
+
           <Link
             href="/events/annual-spine-pain-symposium"
             className="lg:col-span-6 rounded-2xl overflow-hidden relative shadow-md group min-h-[320px] sm:min-h-[380px] flex flex-col justify-end bg-[#0f1923] cursor-pointer"
@@ -63,16 +63,16 @@ export default function Events() {
 
             <div className="relative p-6 sm:p-8 z-10 text-white">
               <div className="flex items-center justify-between gap-3 mb-2">
-                <span className="text-[11px] uppercase font-bold tracking-widest text-[#0d736d] bg-white/95 px-2.5 py-1 rounded-lg inline-block">
+                <span className="text-[11px] uppercase font-bold tracking-widest text-[#003C72] bg-white/95 px-2.5 py-1 rounded-lg inline-block">
                   {t.events.featuredBadge}
                 </span>
                 <span className="text-xs text-white/80 font-medium flex items-center gap-1">
-                  <Calendar className="w-3 h-3 text-[#0d736d]" />
+                  <Calendar className="w-3 h-3 text-[#fff]" />
                   <span>{isAr ? "١٤ - ١٦ نوفمبر ٢٠٢٦" : "Nov 14-16, 2026"}</span>
                 </span>
               </div>
 
-              <h3 className="text-xl sm:text-2xl font-bold leading-tight mb-2 group-hover:text-[#0d736d] transition-colors flex items-center justify-between gap-3">
+              <h3 className="text-xl sm:text-2xl font-bold leading-tight mb-2 group-hover:text-[#fff] transition-colors flex items-center justify-between gap-3">
                 <span>{t.events.featuredTitle}</span>
                 <ArrowUpRight className={`w-5 h-5 flex-shrink-0 transition-transform ${isAr ? "rtl-mirror" : "group-hover:translate-x-0.5 group-hover:-translate-y-0.5"}`} />
               </h3>
@@ -104,12 +104,12 @@ export default function Events() {
 
                 <div className="flex-1 w-full">
                   <div className="flex items-center justify-between gap-2 mb-0.5">
-                    <span className="text-[10px] font-semibold text-[#0d736d] uppercase tracking-wider block">
+                    <span className="text-[10px] font-semibold text-[#003C72] uppercase tracking-wider block">
                       {item.tag}
                     </span>
                     <ArrowUpRight className={`w-3.5 h-3.5 text-neutral-400 group-hover:text-[#0d736d] transition-colors ${isAr ? "rtl-mirror" : ""}`} />
                   </div>
-                  <h4 className="text-base font-bold text-[#0f1923] mb-1 group-hover:text-[#0d736d] transition-colors">
+                  <h4 className="text-base font-bold text-[#003C72] mb-1 group-hover:text-[#003C72] transition-colors">
                     {item.title}
                   </h4>
                   <p className="text-xs text-neutral-600 leading-relaxed">

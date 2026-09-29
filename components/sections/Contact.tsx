@@ -48,21 +48,18 @@ export default function Contact() {
   return (
     <section id="contact" className="py-12 lg:py-16 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        {/* Full-Width Dark Banner (MediClinic Iconic Bottom CTA Pattern) */}
         <div className="bg-[#0f1923] rounded-2xl md:rounded-3xl p-6 sm:p-10 lg:p-14 text-white relative overflow-hidden shadow-xl">
-          {/* Subtle background glow */}
           <div className="absolute -top-32 -right-32 w-80 h-80 rounded-full bg-[#0d736d]/20 blur-3xl pointer-events-none" />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start relative z-10">
-            {/* Left Content */}
             <div className="lg:col-span-6">
-              <span className="text-xs uppercase font-bold tracking-widest text-[#0d736d] bg-[#0d736d]/20 border border-[#0d736d]/30 px-3 py-1 rounded-lg inline-block mb-4">
+              <span className="text-xs uppercase font-bold tracking-widest text-[#fff] bg-[#003C72]/20 border border-[#0d736d]/30 px-3 py-1 rounded-lg inline-block mb-4">
                 {t.contact.badge}
               </span>
 
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.12] mb-4">
                 {t.contact.titleLine1}<br />
-                <span className="text-[#0d736d]">{t.contact.titleLine2}</span>
+                <span className="text-[#ddd]">{t.contact.titleLine2}</span>
               </h2>
 
               <p className="text-neutral-300 text-sm sm:text-base leading-relaxed mb-6 max-w-lg">
@@ -123,7 +120,7 @@ export default function Contact() {
                     <MapPin className="w-4 h-4" />
                   </div>
                   <a
-                    href="https://www.google.com/maps/search/?api=1&query=79H2%2BJR3%20Abu%20Saif%20Business%20Centre%2C%20Main%20Entrance%20B%2C%20Hor%20Al%20Anz%20East%2C%20Deira%2C%20Dubai"
+                    href="https://maps.app.goo.gl/hhS5KaSQzjjiE6HD7"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block min-w-0 group"
@@ -249,7 +246,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="w-full bg-[#0d736d] hover:bg-[#0a5c57] text-white font-semibold py-2.5 px-4 rounded-lg text-xs transition-all duration-200 shadow-sm cursor-pointer flex items-center justify-center gap-2 group"
+                    className="w-full bg-[#003C72] hover:bg-[#003C72]/90 text-white font-semibold py-2.5 px-4 rounded-lg text-xs transition-all duration-200 shadow-sm cursor-pointer flex items-center justify-center gap-2 group"
                   >
                     <span>{submitting ? (isAr ? "جارٍ الإرسال..." : "Sending...") : t.contact.submitBtn}</span>
                     <ArrowUpRight className={`w-3.5 h-3.5 transition-transform duration-200 ${isAr ? "rtl-mirror" : "group-hover:translate-x-0.5 group-hover:-translate-y-0.5"}`} />

@@ -18,7 +18,7 @@ export default function Products() {
               <span>{t.products.badge}</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#0f1923] tracking-tight leading-tight mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-[#003C72] tracking-tight leading-tight mb-4">
               {t.products.title}
             </h2>
 
@@ -28,7 +28,7 @@ export default function Products() {
 
             {/* Direct Assistance Box */}
             <div className="bg-white border border-[#e8eaed] rounded-2xl p-5 mb-6 shadow-xs">
-              <span className="text-xs uppercase font-bold tracking-wider text-[#0d736d] block mb-1">
+              <span className="text-xs uppercase font-bold tracking-wider text-[#003C72] block mb-1">
                 {t.products.deskTitle}
               </span>
               <p className="text-xs text-neutral-500 mb-3">
@@ -39,7 +39,7 @@ export default function Products() {
                 className="text-base sm:text-lg font-bold text-[#0f1923] hover:text-[#0d736d] transition-colors flex items-center gap-2 group"
                 dir="ltr"
               >
-                <div className="w-7 h-7 rounded-full bg-[#0d736d]/10 text-[#0d736d] flex items-center justify-center">
+                <div className="w-7 h-7 rounded-full bg-[#003C72]/10 text-[#0d736d] flex items-center justify-center">
                   <Phone className="w-3.5 h-3.5" />
                 </div>
                 <span>+971 4 254 8020</span>
@@ -55,7 +55,6 @@ export default function Products() {
             </a>
           </div>
 
-          {/* Right Column: MediClinic Accordion */}
           <div className="lg:col-span-7 bg-white rounded-2xl border border-[#e8eaed] p-5 sm:p-8 shadow-xs divide-y divide-[#e8eaed]">
             {t.products.faqs.map((faq, idx) => {
               const isOpen = openIndex === idx;
@@ -66,14 +65,14 @@ export default function Products() {
                     onClick={() => setOpenIndex(isOpen ? null : idx)}
                     className="w-full text-left rtl:text-right flex items-center justify-between gap-4 cursor-pointer group"
                   >
-                    <span className="text-base sm:text-lg font-bold text-[#0f1923] group-hover:text-[#0d736d] transition-colors">
+                    <span className="text-base sm:text-lg font-bold text-[#0f1923] group-hover:text-[#003C72] transition-colors">
                       {faq.question}
                     </span>
                     <div
                       className={`w-8 h-8 rounded-full border border-[#e8eaed] flex items-center justify-center flex-shrink-0 transition-all duration-300 ${
                         isOpen
-                          ? "bg-[#0d736d] border-[#0d736d] text-white rotate-45"
-                          : "text-[#0f1923] group-hover:border-[#0d736d]"
+                          ? "bg-[#003C72] border-[#0d736d] text-white rotate-45"
+                          : "text-[#0f1923] group-hover:border-[#003C72]"
                       }`}
                     >
                       <Plus className="w-3.5 h-3.5 stroke-[2.5]" />

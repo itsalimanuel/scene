@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Cairo } from "next/font/google";
 import "./globals.css";
 import { I18nProvider } from "@/lib/i18n/context";
+import Preloader from "@/components/ui/Preloader";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -103,7 +104,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${cairo.variable}`}>
       <body>
-        <I18nProvider>{children}</I18nProvider>
+        <I18nProvider>
+          <Preloader />
+          {children}
+        </I18nProvider>
       </body>
     </html>
   );

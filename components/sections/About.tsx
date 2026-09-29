@@ -8,7 +8,6 @@ export default function About() {
   return (
     <section id="about" className="py-14 lg:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        {/* Top Header: Badge + Statement */}
         <div className="max-w-4xl mb-10">
           <div className="section-badge mb-4">
             <span className="badge-dot" />
@@ -24,7 +23,6 @@ export default function About() {
           </p>
         </div>
 
-        {/* Widescreen Cinematic Image (MediClinic pattern) */}
         <div className="relative rounded-[24px] md:rounded-[32px] overflow-hidden h-[300px] sm:h-[380px] lg:h-[440px] shadow-lg group mb-12">
           <img
             src="/images/about-surgical-lab.jpg"
@@ -33,7 +31,6 @@ export default function About() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0f1923]/75 via-black/20 to-transparent" />
 
-          {/* Floating Details Overlay */}
           <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-10 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div className="text-white max-w-xl">
               <span className="text-xs uppercase tracking-[0.2em] font-bold text-[#0d736d] bg-white/95 px-3 py-1 rounded-full inline-block mb-2">

@@ -15,7 +15,6 @@ export default function Solutions() {
   return (
     <section id="solutions" className="py-14 lg:py-20 bg-[#f9f9fb] border-t border-b border-[#e8eaed]">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        {/* Header (MediClinic style) */}
         <div className="text-center max-w-3xl mx-auto mb-10">
           <div className="section-badge mb-3">
             <span className="badge-dot" />
@@ -29,16 +28,14 @@ export default function Solutions() {
           </p>
         </div>
 
-        {/* MediClinic Numbered Service List */}
         <div className="space-y-4">
           {t.solutions.items.map((service, index) => (
             <div
               key={index}
               className="bg-white rounded-2xl border border-[#e8eaed] p-6 sm:p-7 hover:border-[#0d736d] hover:shadow-lg transition-all duration-300 grid grid-cols-1 lg:grid-cols-12 gap-6 items-center"
             >
-              {/* Number */}
               <div className="lg:col-span-1">
-                <span className="text-2xl sm:text-3xl font-bold font-mono text-[#0d736d]">
+                <span className="text-2xl sm:text-3xl font-bold font-mono text-[#003C72]">
                   {service.num}
                 </span>
               </div>
@@ -66,7 +63,7 @@ export default function Solutions() {
                   {service.tags.map((tag, tIdx) => (
                     <span
                       key={tIdx}
-                      className="bg-[#f0f7f6] text-[#0d736d] text-xs font-medium px-2.5 py-1 rounded-md"
+                      className="bg-[#003C72]/20 text-[#003C72] text-xs font-medium px-2.5 py-1 rounded-md"
                     >
                       {tag}
                     </span>
@@ -74,7 +71,7 @@ export default function Solutions() {
                 </div>
               </div>
 
-              {/* High-Quality Rounded Medical Photo */}
+
               <div className="lg:col-span-3 rounded-xl overflow-hidden h-36 sm:h-40 w-full relative shadow-xs">
                 <img
                   src={serviceImages[index]}
