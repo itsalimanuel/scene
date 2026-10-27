@@ -25,7 +25,7 @@ export default function About() {
 
         <div className="relative rounded-[24px] md:rounded-[32px] overflow-hidden h-[300px] sm:h-[380px] lg:h-[440px] shadow-lg group mb-12">
           <img
-            src="/images/about-surgical-lab.jpg"
+            src="/new/specialized.png"
             alt="Scene Medical clinical technologies in practice"
             className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
           />

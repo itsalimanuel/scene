@@ -3,10 +3,10 @@ import { ArrowUpRight } from "lucide-react";
 import { useI18n } from "@/lib/i18n/context";
 
 const serviceImages = [
-  "/images/solutions-spine-implants.jpg",
-  "/images/solutions-surgical-tools.jpg",
-  "/images/solutions-rf-device.jpg",
-  "/images/solutions-pain-management.jpg",
+  "/new/1.jpg",
+  "/new/2.jpg",
+  "/new/3.jpg",
+  "/new/4.jpg",
 ];
 
 export default function Solutions() {

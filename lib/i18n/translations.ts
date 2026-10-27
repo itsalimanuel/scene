@@ -147,9 +147,9 @@ export const translations: Record<Locale, Translations> = {
     },
     hero: {
       badge: "Dubai, UAE • Healthcare Solutions",
-      titleLine1: "Supporting care.",
-      titleLine2: "Advancing",
-      titleAccent: "possibilities.",
+      titleLine1: "Leaders in Pain.",
+      titleLine2: "Management & Minimally Invasive",
+      titleAccent: "Spine Solutions.",
       desc: "Advanced surgical systems for spine, interventional pain, and orthopedics — empowering clinical teams across the UAE.",
       exploreBtn: "Explore Solutions",
       aboutBtn: "Get to know Scene",
@@ -282,7 +282,7 @@ export const translations: Record<Locale, Translations> = {
         },
         {
           num: "03",
-          title: "SDF & Interbody Cages",
+          title: "ACDF & Interbody Cages",
           desc: "Anatomically contoured PEEK and porous 3D titanium fusion spacers.",
           field: "Spinal Fusion",
         },
@@ -300,7 +300,7 @@ export const translations: Record<Locale, Translations> = {
         },
         {
           num: "06",
-          title: "Kyphoplasty Systems",
+          title: "Kyphoplasty System",
           desc: "Controlled inflatable balloon tamps and targeted cement injection kits.",
           field: "Fracture Restoration",
         },

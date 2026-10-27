@@ -55,7 +55,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
 
-          <Link href="/#home" className="flex items-center no-underline group py-2">
+          <Link href="/" className="flex items-center no-underline group py-2">
             <img
               src="/images/logo.png"
               alt="Scene Medical Supplies"

@@ -3,11 +3,11 @@ import { ArrowRight } from "lucide-react";
 import { useI18n } from "@/lib/i18n/context";
 
 const focusImages = [
-  "/images/about-surgical-lab.jpg",
-  "/images/focus-endoscopy.jpg",
-  "/images/solutions-surgical-tools.jpg",
+  "/new/rfa.png",
+  "/new/lumbar.png",
+  "/new/ACDF.png",
   "/images/solutions-pain-management.jpg",
-  "/images/solutions-rf-device.jpg",
+  "/new/endoscopic.png",
   "/images/hero-panorama.jpg",
 ];
 

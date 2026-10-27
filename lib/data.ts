@@ -46,10 +46,10 @@ export const solutionCards = [
     number: "03",
     title: "Minimally\ninvasive spine",
     items: [
-      "Endoscopic spine systems",
+      "Endoscopic spine system",
       "Endoscopic decompression solutions",
       "Minimally invasive spinal procedures",
-      "Kyphoplasty systems",
+      "Kyphoplasty system",
       "Vertebral compression fracture solutions",
     ],
     featured: false,
@@ -73,7 +73,7 @@ export const procedures = [
     description: "Solutions for spinal stabilization.",
   },
   {
-    title: "SDF cages",
+    title: "ACDF cages",
     description: "For spinal fusion procedures.",
   },
   {

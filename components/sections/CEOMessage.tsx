@@ -9,15 +9,15 @@ export default function CEOMessage() {
   return (
     <section id="leadership" className="bg-[#003C72] py-14 text-white lg:py-20">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-6 lg:grid-cols-12 lg:gap-14 lg:px-12">
-        <div className="relative aspect-[4/3] overflow-hidden rounded-lg sm:aspect-[16/9] lg:col-span-4 lg:aspect-[4/5]">
+        <div className="relative aspect-[3/3] overflow-hidden rounded-lg sm:aspect-[16/9] lg:col-span-4 lg:aspect-[4/5]">
           <img
-            src="/images/doctor-1.jpg"
+            src="/ceo.jpeg"
             alt={isAr ? "صورة مؤقتة لماكس، الرئيس التنفيذي" : "Temporary portrait for Max, CEO"}
             className="absolute inset-0 h-full w-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#003C72]/70 via-transparent to-transparent" />
           <span className="absolute bottom-4 left-4 text-[10px] font-semibold uppercase tracking-widest text-white/80">
-            {isAr ? "سين ميديكال" : "SCENE MEDICAL"}
+            {isAr ? "الدكتور ايمن عزيزه" : "Dr. Ayman Aziza"}
           </span>
         </div>
 
@@ -35,7 +35,7 @@ export default function CEOMessage() {
           </blockquote>
 
           <div className="mt-8 border-t border-white/25 pt-5">
-            <p className="text-lg font-bold">{isAr ? "ماكس" : "Max"}</p>
+            <p className="text-lg font-bold">{isAr ? "الدكتور ايمن عزيزه" : "Dr. Ayman Aziza"}</p>
             <p className="mt-1 text-sm text-white/70">
               {isAr ? "الرئيس التنفيذي" : "CEO"}
             </p>

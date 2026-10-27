@@ -16,7 +16,7 @@ export default function Hero() {
           <div className="reveal lg:col-span-8">
             <div className="dot-badge mb-6">{t.hero.badge}</div>
 
-            <h1 className="mb-8 text-4xl font-bold leading-[1.03] tracking-tight text-[#0f1923] sm:text-6xl md:text-7xl lg:text-[5.25rem]">
+            <h1 className="mb-8 text-4xl font-bold leading-[1.03] tracking-tight text-[#0f1923] sm:text-6xl md:text-7xl lg:text-[4.25rem]">
               {t.hero.titleLine1}<br />
               {t.hero.titleLine2}{" "}
               <span className="font-serif italic text-[#003C72]">
@@ -95,7 +95,7 @@ export default function Hero() {
 
       <div className="hero-panorama relative mx-4 h-[380px] overflow-hidden rounded-t-3xl shadow-2xl sm:mx-8 sm:h-[480px] md:mx-12 md:h-[580px] lg:h-[640px]">
         <img
-          src="/images/hero-panorama.jpg"
+          src="/new/hero.png"
           alt="High-tech surgical suite"
           className="h-full w-full object-cover object-center"
           fetchPriority="high"
